@@ -5,12 +5,12 @@ import { Boxes, Trees, Landmark, Droplets, Flower2, ArrowRight, CheckCircle2, Sp
 export default function ServicesSection() {
   const getIcon = (iconName) => {
     switch (iconName) {
-      case 'Boxes': return <Boxes className="w-6 h-6 text-gold" />;
-      case 'TreePalms': return <Trees className="w-6 h-6 text-gold" />;
-      case 'Landmark': return <Landmark className="w-6 h-6 text-gold" />;
-      case 'Droplets': return <Droplets className="w-6 h-6 text-gold" />;
-      case 'Flower2': return <Flower2 className="w-6 h-6 text-gold" />;
-      default: return <Sparkles className="w-6 h-6 text-gold" />;
+      case 'Boxes': return <Boxes className="w-6 h-6 text-emerald-700 group-hover:text-white transition-colors" />;
+      case 'TreePalms': return <Trees className="w-6 h-6 text-emerald-700 group-hover:text-white transition-colors" />;
+      case 'Landmark': return <Landmark className="w-6 h-6 text-emerald-700 group-hover:text-white transition-colors" />;
+      case 'Droplets': return <Droplets className="w-6 h-6 text-emerald-700 group-hover:text-white transition-colors" />;
+      case 'Flower2': return <Flower2 className="w-6 h-6 text-emerald-700 group-hover:text-white transition-colors" />;
+      default: return <Sparkles className="w-6 h-6 text-emerald-700 group-hover:text-white transition-colors" />;
     }
   };
 
@@ -20,21 +20,21 @@ export default function ServicesSection() {
   };
 
   return (
-    <section id="services" className="py-24 px-4 md:px-8 bg-cream text-forest relative">
+    <section id="services" className="py-24 px-4 md:px-8 bg-white text-slate-900 relative">
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 border-b border-forest/10 pb-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 border-b border-slate-200 pb-8">
           <div>
-            <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block mb-2">
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-emerald-700 block mb-2">
               Professional Services We Provide
             </span>
-            <h2 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-forest">
+            <h2 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-slate-900">
               Landscaping Services We Provide & <br />
-              <span className="text-gradient-gold italic">Nursery Solutions</span>
+              <span className="text-emerald-700 italic">Nursery Solutions</span>
             </h2>
           </div>
-          <p className="max-w-md text-sm text-forest/70 font-light leading-relaxed">
+          <p className="max-w-md text-sm text-slate-600 font-light leading-relaxed">
             From 3D master planning to crane-loaded mature tree installation, Mian Nursery provides complete turnkey excellence across Pakistan.
           </p>
         </div>
@@ -44,35 +44,35 @@ export default function ServicesSection() {
           {SERVICES.map((service) => (
             <div
               key={service.id}
-              className="group p-8 rounded-2xl bg-white border border-forest/10 hover:border-gold/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              className="group p-8 rounded-2xl bg-white border border-slate-200 hover:border-emerald-500 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Header Row */}
                 <div className="flex items-center justify-between gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-forest/5 border border-forest/10 flex items-center justify-center group-hover:bg-forest group-hover:text-gold transition-colors">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-700 transition-colors">
                     {getIcon(service.icon)}
                   </div>
-                  <span className="px-3 py-1 rounded-full bg-gold/10 text-gold text-[10px] font-bold uppercase tracking-wider">
+                  <span className="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold uppercase tracking-wider border border-emerald-200">
                     {service.badge}
                   </span>
                 </div>
 
-                <h3 className="font-serif text-2xl font-bold text-forest mb-1 group-hover:text-gold transition-colors">
+                <h3 className="font-serif text-2xl font-bold text-slate-900 mb-1 group-hover:text-emerald-700 transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-xs font-semibold uppercase tracking-wider text-forest/50 mb-4">
+                <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-4">
                   {service.subtitle}
                 </p>
 
-                <p className="text-xs md:text-sm text-forest/75 font-light leading-relaxed mb-6">
+                <p className="text-xs md:text-sm text-slate-600 font-light leading-relaxed mb-6">
                   {service.description}
                 </p>
 
                 {/* Features list */}
-                <ul className="space-y-2 mb-8 pt-4 border-t border-forest/5">
+                <ul className="space-y-2 mb-8 pt-4 border-t border-slate-100">
                   {service.features.map((feat, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-xs font-medium text-forest/80">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-accent shrink-0" />
+                    <li key={idx} className="flex items-center gap-2 text-xs font-medium text-slate-700">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                       <span>{feat}</span>
                     </li>
                   ))}
@@ -82,7 +82,7 @@ export default function ServicesSection() {
               {/* Action Button */}
               <button
                 onClick={() => handleInquireService(service.title)}
-                className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl bg-forest/5 text-forest font-bold text-xs uppercase tracking-wider group-hover:bg-gradient-gold group-hover:text-forest transition-all"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 font-bold text-xs uppercase tracking-wider group-hover:bg-emerald-700 group-hover:text-white transition-all shadow-sm"
               >
                 Inquire Service We Provide <ArrowRight className="w-4 h-4" />
               </button>

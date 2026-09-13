@@ -18,7 +18,7 @@ export default function FloatingWhatsApp() {
         <MessageSquare className="w-7 h-7 fill-white group-hover:rotate-12 transition-transform" />
 
         {/* Hover Tooltip */}
-        <span className="absolute right-16 px-3 py-1.5 rounded-xl bg-forest-dark border border-gold/30 text-gold text-xs font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg pointer-events-none">
+        <span className="absolute right-16 px-3 py-1.5 rounded-xl bg-slate-900 border border-emerald-500 text-emerald-400 text-xs font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg pointer-events-none">
           WhatsApp 3D Architect
         </span>
       </a>

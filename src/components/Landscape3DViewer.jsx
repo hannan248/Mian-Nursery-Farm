@@ -28,8 +28,8 @@ export default function Landscape3DViewer() {
     // 1. Scene Setup
     const scene = new THREE.Scene();
     sceneRef.current = scene;
-    scene.background = new THREE.Color(isNightMode ? 0x05130E : 0xEAF4EE);
-    scene.fog = new THREE.FogExp2(isNightMode ? 0x05130E : 0xEAF4EE, 0.02);
+    scene.background = new THREE.Color(isNightMode ? 0x064E3B : 0xF8FAFC);
+    scene.fog = new THREE.FogExp2(isNightMode ? 0x064E3B : 0xF8FAFC, 0.02);
 
     // 2. Camera Setup
     const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
@@ -441,29 +441,29 @@ export default function Landscape3DViewer() {
   };
 
   return (
-    <section id="3d-visualizer" className="py-20 md:py-28 px-4 md:px-8 bg-forest-dark relative overflow-hidden text-cream">
+    <section id="3d-visualizer" className="py-20 md:py-28 px-4 md:px-8 bg-slate-50 relative overflow-hidden text-slate-900">
       {/* Decorative Glow background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-accent/15 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-200/30 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Title */}
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs font-semibold uppercase tracking-widest mb-4">
-            <Sparkles className="w-3.5 h-3.5" /> Live 3D Architectural Studio
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-800 text-xs font-semibold uppercase tracking-widest mb-4">
+            <Sparkles className="w-3.5 h-3.5 text-emerald-700" /> Live 3D Architectural Studio
           </div>
-          <p className="text-cream/80 text-base md:text-lg font-light leading-relaxed">
+          <p className="text-slate-600 text-base md:text-lg font-light leading-relaxed">
             Drag to rotate 360°, zoom, and switch style presets to see how our landscape architects design luxury estates in Pakistan before execution.
           </p>
         </div>
 
         {/* 3D Visualizer Container Box */}
-        <div className="relative rounded-2xl overflow-hidden border border-gold/20 shadow-2xl bg-forest/90 glass-panel-dark">
+        <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-white">
           
           {/* Top Control Bar */}
-          <div className="absolute top-4 left-4 right-4 z-20 flex flex-wrap items-center justify-between gap-3 p-3 rounded-xl bg-forest-dark/80 backdrop-blur-md border border-white/10">
+          <div className="absolute top-4 left-4 right-4 z-20 flex flex-wrap items-center justify-between gap-3 p-3 rounded-xl bg-white/90 backdrop-blur-md border border-slate-200 shadow-sm">
             {/* Presets Switcher */}
             <div className="flex items-center gap-2 overflow-x-auto py-1 no-scrollbar">
-              <span className="text-[11px] uppercase tracking-wider text-gold font-semibold mr-1 hidden sm:inline">
+              <span className="text-[11px] uppercase tracking-wider text-emerald-800 font-bold mr-1 hidden sm:inline">
                 Preset:
               </span>
               {[
@@ -476,8 +476,8 @@ export default function Landscape3DViewer() {
                   onClick={() => setActivePreset(preset.id)}
                   className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all whitespace-nowrap ${
                     activePreset === preset.id
-                      ? 'bg-gold text-forest font-bold shadow-md shadow-gold/20'
-                      : 'bg-white/5 text-cream/80 hover:bg-white/10 hover:text-cream'
+                      ? 'bg-emerald-700 text-white font-bold shadow-md shadow-emerald-700/20'
+                      : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                   }`}
                 >
                   {preset.name}
@@ -489,16 +489,16 @@ export default function Landscape3DViewer() {
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setIsNightMode(!isNightMode)}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-semibold text-cream hover:bg-white/10 transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-800 hover:bg-slate-200 transition-colors"
                 title="Toggle Day/Night Garden Lighting"
               >
                 {isNightMode ? (
                   <>
-                    <Moon className="w-3.5 h-3.5 text-gold" /> <span className="hidden sm:inline">Night Mode</span>
+                    <Moon className="w-3.5 h-3.5 text-emerald-700" /> <span className="hidden sm:inline">Night Mode</span>
                   </>
                 ) : (
                   <>
-                    <Sun className="w-3.5 h-3.5 text-amber-400" /> <span className="hidden sm:inline">Daylight</span>
+                    <Sun className="w-3.5 h-3.5 text-amber-500" /> <span className="hidden sm:inline">Daylight</span>
                   </>
                 )}
               </button>
@@ -506,11 +506,11 @@ export default function Landscape3DViewer() {
               <button
                 onClick={() => setIsRotating(!isRotating)}
                 className={`p-2 rounded-lg border text-xs transition-colors ${
-                  isRotating ? 'bg-emerald-accent/30 border-emerald-accent/50 text-emerald-300' : 'bg-white/5 border-white/10 text-cream/70'
+                  isRotating ? 'bg-emerald-100 border-emerald-300 text-emerald-800 font-bold' : 'bg-slate-100 border-slate-200 text-slate-700'
                 }`}
                 title="Toggle Auto 360° Rotation"
               >
-                <RotateCcw className={`w-3.5 h-3.5 ${isRotating ? 'animate-spin-slow' : ''}`} />
+                <RotateCcw className={`w-3.5 h-3.5 ${isRotating ? 'animate-spin-slow text-emerald-700' : ''}`} />
               </button>
             </div>
           </div>
@@ -522,23 +522,23 @@ export default function Landscape3DViewer() {
           />
 
           {/* Drag & Rotate Instruction Overlay */}
-          <div className="absolute bottom-4 left-4 z-20 pointer-events-none hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-sm text-[11px] text-cream/80 border border-white/10">
-            <Eye className="w-3.5 h-3.5 text-gold" /> Click & drag to rotate 360° | Scroll to Zoom
+          <div className="absolute bottom-4 left-4 z-20 pointer-events-none hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900/80 backdrop-blur-sm text-[11px] text-white border border-slate-700">
+            <Eye className="w-3.5 h-3.5 text-emerald-400" /> Click & drag to rotate 360° | Scroll to Zoom
           </div>
 
           {/* Bottom Action Ribbon */}
-          <div className="p-4 sm:p-6 bg-gradient-to-r from-forest-dark via-forest to-forest-dark border-t border-gold/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="p-4 sm:p-6 bg-slate-900 text-white border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gold/20 border border-gold/40 flex items-center justify-center text-gold shrink-0">
+              <div className="w-10 h-10 rounded-full bg-emerald-600 border border-emerald-500 flex items-center justify-center text-white shrink-0 shadow-md">
                 <Box className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="font-serif text-lg font-bold text-cream">
+                <h4 className="font-serif text-lg font-bold text-white">
                   {activePreset === 'villa' && '1 Kanal Executive Villa Garden'}
                   {activePreset === 'farmhouse' && 'Multi-Kanal Farmhouse Estate Master Plan'}
                   {activePreset === 'zen' && 'Modern Minimalist Zen Patio & Water Feature'}
                 </h4>
-                <p className="text-xs text-cream/70">
+                <p className="text-xs text-slate-300">
                   Customized 3D architectural blueprint, soil testing & specimen delivery available nationwide.
                 </p>
               </div>
@@ -546,7 +546,7 @@ export default function Landscape3DViewer() {
 
             <button
               onClick={handleWhatsAppInquiry}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-gold text-forest font-bold px-6 py-3 rounded-xl text-xs uppercase tracking-widest shadow-lg hover:shadow-gold/30 hover:scale-[1.02] transition-all shrink-0"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 text-white font-bold px-6 py-3 rounded-xl text-xs uppercase tracking-widest shadow-lg hover:bg-emerald-700 hover:scale-[1.02] transition-all shrink-0"
             >
               <Send className="w-4 h-4" /> Request Custom 3D Plan
             </button>
@@ -561,11 +561,11 @@ export default function Landscape3DViewer() {
             { title: "Acclimatized Plants", desc: "Specimens suited to Pakistan" },
             { title: "Turnkey Execution", desc: "From design to final planting" }
           ].map((item, idx) => (
-            <div key={idx} className="p-4 rounded-xl bg-forest/40 border border-white/5 flex items-center gap-3">
-              <ShieldCheck className="w-5 h-5 text-gold shrink-0" />
+            <div key={idx} className="p-4 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center gap-3">
+              <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0" />
               <div>
-                <p className="text-xs font-bold text-cream">{item.title}</p>
-                <p className="text-[11px] text-cream/60">{item.desc}</p>
+                <p className="text-xs font-bold text-slate-900">{item.title}</p>
+                <p className="text-[11px] text-slate-500">{item.desc}</p>
               </div>
             </div>
           ))}

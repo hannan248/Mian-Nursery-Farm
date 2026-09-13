@@ -8,34 +8,34 @@ export default {
     extend: {
       colors: {
         forest: {
-          DEFAULT: '#0B2B1D',
-          dark: '#061A11',
-          light: '#14412C'
+          DEFAULT: '#15803D',
+          dark: '#166534',
+          light: '#22C55E'
         },
         moss: {
-          DEFAULT: '#1A4331',
-          light: '#285E46'
+          DEFAULT: '#059669',
+          light: '#10B981'
         },
         gold: {
-          DEFAULT: '#D4AF37',
-          light: '#F4E090',
-          dark: '#AA8821'
+          DEFAULT: '#166534',
+          light: '#22C55E',
+          dark: '#14532D'
         },
         cream: {
-          DEFAULT: '#FBF9F4',
-          dark: '#F0ECE1'
+          DEFAULT: '#FFFFFF',
+          dark: '#F8FAFC'
         },
-        sand: '#F3EFE6',
-        earth: '#4A3B32'
+        sand: '#F0FDF4',
+        earth: '#334155'
       },
       fontFamily: {
         serif: ['"Playfair Display"', 'Georgia', 'serif'],
         sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
       },
       boxShadow: {
-        'glow-gold': '0 0 25px rgba(212, 175, 55, 0.25)',
-        'glow-emerald': '0 0 25px rgba(16, 91, 56, 0.25)',
-        'glass': '0 8px 32px 0 rgba(11, 43, 29, 0.12)',
+        'glow-gold': '0 0 25px rgba(22, 128, 61, 0.25)',
+        'glow-emerald': '0 0 25px rgba(22, 128, 61, 0.25)',
+        'glass': '0 8px 32px 0 rgba(15, 23, 42, 0.06)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',

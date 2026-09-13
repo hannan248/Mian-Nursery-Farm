@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calculator, Check, MessageSquare, Sparkles, ShieldAlert, ArrowRight } from 'lucide-react';
+import { Calculator, Check, MessageSquare } from 'lucide-react';
 import { COMPANY_INFO } from '../data/nurseryData';
 
 export default function GardenCalculator() {
@@ -48,46 +48,46 @@ export default function GardenCalculator() {
   };
 
   return (
-    <section id="calculator" className="py-24 px-4 md:px-8 bg-forest-dark text-cream relative overflow-hidden">
+    <section id="calculator" className="py-24 px-4 md:px-8 bg-slate-50 text-slate-900 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs font-bold uppercase tracking-widest mb-4">
-            <Calculator className="w-3.5 h-3.5" /> Instant Budget Planning
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-800 text-xs font-bold uppercase tracking-widest mb-4">
+            <Calculator className="w-3.5 h-3.5 text-emerald-700" /> Instant Budget Planning
           </div>
-          <h2 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-cream mb-4">
-            Garden Cost <span className="text-gradient-gold italic">Estimator</span>
+          <h2 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 mb-4">
+            Garden Cost <span className="text-emerald-700 italic">Estimator</span>
           </h2>
-          <p className="text-cream/80 text-sm md:text-base font-light">
+          <p className="text-slate-600 text-sm md:text-base font-light">
             Select your plot dimensions and desired 3D features to receive an immediate estimated cost range for full landscape execution.
           </p>
         </div>
 
         {/* Calculator Box Grid */}
-        <div className="grid lg:grid-cols-12 gap-8 bg-forest/80 border border-gold/30 rounded-3xl p-6 sm:p-10 shadow-2xl glass-panel-dark">
+        <div className="grid lg:grid-cols-12 gap-6 sm:gap-8 bg-white border border-slate-200 rounded-3xl p-4 sm:p-10 shadow-xl">
           
           {/* Left Column: Choices */}
-          <div className="lg:col-span-7 space-y-8">
+          <div className="lg:col-span-7 space-y-6 sm:space-y-8">
             
             {/* Step 1: Plot Size Selector */}
             <div>
-              <label className="text-xs font-bold uppercase tracking-wider text-gold block mb-3">
+              <label className="text-xs font-bold uppercase tracking-wider text-emerald-700 block mb-3">
                 1. Select Plot Area Dimensions
               </label>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-3">
                 {plotOptions.map((option) => (
                   <button
                     key={option.id}
                     onClick={() => setPlotSize(option.id)}
-                    className={`p-3.5 rounded-xl border text-left transition-all ${
+                    className={`p-3 rounded-xl border text-left transition-all ${
                       plotSize === option.id
-                        ? 'bg-gradient-gold text-forest border-gold font-bold shadow-md shadow-gold/20'
-                        : 'bg-white/5 border-white/10 text-cream hover:bg-white/10'
+                        ? 'bg-emerald-700 text-white border-emerald-700 font-bold shadow-md shadow-emerald-700/20'
+                        : 'bg-slate-50 border-slate-200 text-slate-800 hover:bg-slate-100'
                     }`}
                   >
-                    <p className="text-sm font-bold">{option.label}</p>
-                    <p className="text-[11px] opacity-75">{option.sqft.toLocaleString()} Sq Ft</p>
+                    <p className="text-xs sm:text-sm font-bold">{option.label}</p>
+                    <p className="text-[10px] sm:text-[11px] opacity-80">{option.sqft.toLocaleString()} Sq Ft</p>
                   </button>
                 ))}
               </div>
@@ -95,31 +95,31 @@ export default function GardenCalculator() {
 
             {/* Step 2: Feature Checkboxes */}
             <div>
-              <label className="text-xs font-bold uppercase tracking-wider text-gold block mb-3">
+              <label className="text-xs font-bold uppercase tracking-wider text-emerald-700 block mb-3">
                 2. Choose Landscape Features & Infrastructure
               </label>
-              <div className="space-y-3">
+              <div className="space-y-2.5 sm:space-y-3">
                 {featuresList.map((feat) => {
                   const isChecked = selectedFeatures[feat.id];
                   return (
                     <div
                       key={feat.id}
                       onClick={() => toggleFeature(feat.id)}
-                      className={`p-4 rounded-xl border flex items-center justify-between cursor-pointer transition-all ${
+                      className={`p-3 sm:p-4 rounded-xl border flex items-center justify-between cursor-pointer transition-all ${
                         isChecked
-                          ? 'bg-emerald-accent/20 border-emerald-accent/50 text-cream'
-                          : 'bg-white/5 border-white/10 text-cream/70 hover:bg-white/10'
+                          ? 'bg-emerald-50 border-emerald-300 text-slate-900 font-medium'
+                          : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
                       }`}
                     >
                       <div className="flex items-center gap-3">
                         <div
-                          className={`w-5 h-5 rounded-md border flex items-center justify-center transition-colors ${
-                            isChecked ? 'bg-gold border-gold text-forest' : 'border-white/30 bg-transparent'
+                          className={`w-5 h-5 rounded-md border flex items-center justify-center shrink-0 transition-colors ${
+                            isChecked ? 'bg-emerald-700 border-emerald-700 text-white' : 'border-slate-300 bg-white'
                           }`}
                         >
                           {isChecked && <Check className="w-3.5 h-3.5 stroke-[3]" />}
                         </div>
-                        <span className="text-xs font-medium">{feat.name}</span>
+                        <span className="text-xs font-medium leading-snug">{feat.name}</span>
                       </div>
                     </div>
                   );
@@ -129,40 +129,40 @@ export default function GardenCalculator() {
           </div>
 
           {/* Right Column: Instant Live Quote Card */}
-          <div className="lg:col-span-5 flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-forest-dark via-forest to-forest-dark border border-gold/40 shadow-xl">
+          <div className="lg:col-span-5 flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-emerald-800 to-emerald-900 border border-emerald-700 text-white shadow-xl">
             <div>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-gold block mb-2">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-200 block mb-2">
                 Turnkey Landscape Package
               </span>
-              <h3 className="font-serif text-3xl font-bold text-cream mb-1">
+              <h3 className="font-serif text-3xl font-bold text-white mb-1">
                 {currentPlot.label} Garden
               </h3>
-              <p className="text-xs text-cream/60 mb-6">
+              <p className="text-xs text-emerald-100 mb-6 font-light">
                 Covers soil work, plants, materials, labor & 12-month care warranty.
               </p>
 
               {/* Consultation Info Box */}
-              <div className="p-6 rounded-xl bg-black/40 border border-gold/30 text-center mb-6">
-                <p className="text-xs uppercase tracking-widest text-gold mb-2 font-bold">Custom 3D Plan & Quotation</p>
-                <p className="text-xs text-cream/80 font-light leading-relaxed">
+              <div className="p-6 rounded-xl bg-emerald-950/60 border border-emerald-700/60 text-center mb-6">
+                <p className="text-xs uppercase tracking-widest text-emerald-300 mb-2 font-bold">Custom 3D Plan & Quotation</p>
+                <p className="text-xs text-emerald-100 font-light leading-relaxed">
                   Tailored blueprint with plant specs and customized budget breakdown.
                 </p>
               </div>
 
-              <div className="space-y-2 text-xs text-cream/80 mb-8">
-                <div className="flex justify-between py-1 border-b border-white/10">
-                  <span className="text-cream/60">Plot Area:</span>
-                  <span className="font-bold">{currentPlot.sqft.toLocaleString()} Sq Ft</span>
+              <div className="space-y-2 text-xs text-emerald-100 mb-8">
+                <div className="flex justify-between py-1 border-b border-emerald-700/50">
+                  <span className="text-emerald-200">Plot Area:</span>
+                  <span className="font-bold text-white">{currentPlot.sqft.toLocaleString()} Sq Ft</span>
                 </div>
-                <div className="flex justify-between py-1 border-b border-white/10">
-                  <span className="text-cream/60">Selected Features:</span>
-                  <span className="font-bold text-gold">
+                <div className="flex justify-between py-1 border-b border-emerald-700/50">
+                  <span className="text-emerald-200">Selected Features:</span>
+                  <span className="font-bold text-emerald-300">
                     {Object.values(selectedFeatures).filter(Boolean).length} Active
                   </span>
                 </div>
-                <div className="flex justify-between py-1 border-b border-white/10">
-                  <span className="text-cream/60">Site Survey:</span>
-                  <span className="font-bold text-emerald-300">Free in Lahore & Pattoki</span>
+                <div className="flex justify-between py-1 border-b border-emerald-700/50">
+                  <span className="text-emerald-200">Site Survey:</span>
+                  <span className="font-bold text-emerald-200">Free in Lahore & Pattoki</span>
                 </div>
               </div>
             </div>
@@ -170,9 +170,9 @@ export default function GardenCalculator() {
             {/* WhatsApp Export Button */}
             <button
               onClick={handleWhatsAppExport}
-              className="w-full py-4 rounded-xl bg-gradient-gold text-forest font-bold text-xs uppercase tracking-widest hover:bg-cream transition-all flex items-center justify-center gap-2 shadow-lg shadow-gold/25"
+              className="w-full py-4 rounded-xl bg-white text-emerald-900 font-bold text-xs uppercase tracking-widest hover:bg-emerald-50 transition-all flex items-center justify-center gap-2 shadow-lg"
             >
-              <MessageSquare className="w-4 h-4 fill-forest" /> Get Official 3D Quote on WhatsApp
+              <MessageSquare className="w-4 h-4 fill-emerald-900" /> Get Official 3D Quote on WhatsApp
             </button>
           </div>
         </div>
