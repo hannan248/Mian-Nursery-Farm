@@ -374,6 +374,90 @@ export const PORTFOLIO_PROJECTS = [
   }
 ];
 
+export const PROJECTS_3D_GALLERY = [
+  {
+    id: "3d-1",
+    title: "Commercial Petrol Pump & Plaza 3D Landscape Plan",
+    category: "Commercial 3D",
+    image: "/images/3d_allied_petrol_pump_plan.jpg",
+    tag: "3D Proposed Plan",
+    description: "Architectural 3D CAD visualization for Allied petrol pump roundabout. Features Phoenix Palms, topiary bushes, white marble gravel, and concrete kerb edging.",
+    features: ["Commercial Site Blueprint", "Date Palms & Topiary", "Marble Gravel Borders", "Turnkey Civil Execution"]
+  },
+  {
+    id: "3d-2",
+    title: "1 Kanal Villa Front Elevation & Wall Landscaping",
+    category: "Villa Elevations",
+    image: "/images/3d_villa_front_elevation.jpg",
+    tag: "Architectural 3D",
+    description: "Modern luxury villa front elevation render showcasing wall niche planters, sculpted topiary spirals, Bismarckia silver palms, and green lawn sod.",
+    features: ["Front Wall Elevation", "Wall Niche Planters", "Spiral Ficus Topiary", "Fresh Dhaka Grass"]
+  },
+  {
+    id: "3d-3",
+    title: "Modern Villa Lawn & Tropical Rockery 3D Renders",
+    category: "Villa Elevations",
+    image: "/images/3d_villa_lawn_rockery.jpg",
+    tag: "Daylight Render",
+    description: "Detailed 3D landscape layout featuring custom wave-pattern stone borders, Agave succulents, dwarf palms, and lush lawn turf.",
+    features: ["Wave Pattern Borders", "Agave Rockery Garden", "Dwarf Palm Accents", "Automatic Drip Lines"]
+  },
+  {
+    id: "3d-4",
+    title: "3D Floral Bed & Bonsai Master Plan Visualizer",
+    category: "Garden Plans",
+    image: "/images/3d_floral_bed_masterplan.jpg",
+    tag: "3D CAD Blueprint",
+    description: "Intricate flower bed pattern design featuring central Japanese cloud bonsai, red Alternanthera foliage, and white gravel contours.",
+    features: ["Custom Flower Bed CAD", "Cloud Bonsai Focal", "Color Foliage Layers", "Sub-Surface Drip"]
+  },
+  {
+    id: "3d-5",
+    title: "Night Simulation 3D Villa Lighting & Architecture",
+    category: "Night Lighting",
+    image: "/images/3d_villa_night_lighting.jpg",
+    tag: "Night Simulation",
+    description: "Realistic night lighting simulation demonstrating warm spot LED up-lights on mature Date Palms, spiral topiaries, and villa facade wall washers.",
+    features: ["3D Night Lighting Render", "Warm Up-Lighting LEDs", "Facade Wall Washers", "Ambient Pathway Lights"]
+  },
+  {
+    id: "3d-6",
+    title: "Luxury Waterfall Wall & Fountain Feature 3D Render",
+    category: "Water Features",
+    image: "/images/3d_fountain_waterfall_wall.jpg",
+    tag: "Water Feature 3D",
+    description: "Resort-style backyard water feature visualizer including central multi-jet ring fountain, natural stone waterfall wall, arch bridge, and illuminated Cypress trees.",
+    features: ["Multi-Jet Ring Fountain", "Stone Waterfall Wall", "Illuminated Arch Bridge", "Spiral Cypress Framing"]
+  },
+  {
+    id: "3d-7",
+    title: "Villa Daylight Front Elevation Master Blueprint",
+    category: "Villa Elevations",
+    image: "/images/3d_villa_daylight_elevation.jpg",
+    tag: "Full Elevation",
+    description: "Comprehensive 3D exterior rendering showing full property perimeter, front boundary wall planters, and street-level lawn landscaping.",
+    features: ["Perimeter Master Plan", "Boundary Wall Planters", "Streetscape Landscaping", "High-Resolution Render"]
+  },
+  {
+    id: "3d-8",
+    title: "Perimeter Wall & Ambient Lighting 3D Simulation",
+    category: "Night Lighting",
+    image: "/images/3d_villa_perimeter_lighting.jpg",
+    tag: "Perimeter Lighting",
+    description: "Night lighting CAD visualization highlighting boundary wall recessed lights, palm trunk spotlights, and kerb strip illumination.",
+    features: ["Recessed Wall Lights", "Palm Up-Spotlights", "Kerb Strip Illumination", "Energy-Efficient LEDs"]
+  },
+  {
+    id: "3d-9",
+    title: "Luxury Villa Corner Night Architecture Render",
+    category: "Night Lighting",
+    image: "/images/3d_villa_corner_night.jpg",
+    tag: "3D Corner View",
+    description: "Full estate corner visualization displaying integrated landscape design, outdoor driveway lighting, and multi-tier garden beds at night.",
+    features: ["Corner Lot Visualization", "Multi-Tier Garden Beds", "Driveway Edge Lighting", "Turnkey Execution"]
+  }
+];
+
 export const CLIENT_LOGOS = [
   { name: "Bahria Town", label: "Bahria Town" },
   { name: "DHA Lahore", label: "DHA Lahore" },

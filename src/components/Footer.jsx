@@ -55,7 +55,7 @@ export default function Footer() {
           <ul className="space-y-2 text-xs">
             <li><a href="#services" className="hover:text-emerald-400 transition-colors">Landscaping Services</a></li>
             <li><a href="#catalog" className="hover:text-emerald-400 transition-colors">Botanic Plant Catalog</a></li>
-            <li><a href="#portfolio" className="hover:text-emerald-400 transition-colors">3D Render & Before/After</a></li>
+            <li><a href="#projects3d" className="hover:text-emerald-400 transition-colors">3D Landscape Projects</a></li>
             <li><a href="#calculator" className="hover:text-emerald-400 transition-colors">Garden Cost Estimator</a></li>
             <li><a href="#contact" className="hover:text-emerald-400 transition-colors">Book Site Consultation</a></li>
           </ul>

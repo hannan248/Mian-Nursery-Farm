@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import ServicesSection from './components/ServicesSection';
 import PlantCatalog from './components/PlantCatalog';
-import BeforeAfterGallery from './components/BeforeAfterGallery';
+import Projects3DGallery from './components/Projects3DGallery';
 import GardenCalculator from './components/GardenCalculator';
 import ClientShowcase from './components/ClientShowcase';
 import FaqSection from './components/FaqSection';
@@ -19,7 +19,7 @@ export default function App() {
         <HeroSection />
         <ServicesSection />
         <PlantCatalog />
-        <BeforeAfterGallery />
+        <Projects3DGallery />
         <GardenCalculator />
         <ClientShowcase />
         <FaqSection />
